@@ -36,7 +36,30 @@ print(30, 40, sep=",")
 # secara default, print akan selalu menampilkan garis baru \n
 # sehingga saat parameter end diganti, maka akan mengganti garis baru
 
-# python 4_print.py
+hasil = input()
+print(hasil)
+
+# fungsi input adalah melakukan permintaan data dari user, sehingga saat program membaca bagian input
+# maka terminal akan meminta input masukkan dari pengguna.
+# hasil keluaran dari input akan selalu berjenis str, sehingga
+# jika ingin mengambil input berupa angka, perlu dilakukan pengubahan jenis data kedalam
+# int atau float
+
+bulat = int(input())
+pecahan = float(input())
+print(bulat, pecahan)
+
+# di atas merupakan contoh input yang langsung di konversi kedalam jenis data angka
+# berupa int dan float.
+
+nama = input("Masukkan nama anda : ")
+print(nama)
+
+# contoh di atas adalah input dengan pesan, sehingga jika anda melihat di terminal
+# terlebih dahulu akan di tampilkan Masukkan nama anda : kemudian setelah itu anda mengisi angkanya
+# di samping kanan bagian tersebut.
+
+# python 4_io.py
 # Hasil ekspektasi dari program ini
 # Helo world123
 # Halo

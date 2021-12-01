@@ -39,6 +39,7 @@ while a > 0:
     b = 0
     while b < 5:
         print(a, b)
+        b += 1
 
 # sama seperti branching, pada looping juga dapat mengimplementasikan nested
 # atau beranak pinak, yaitu di dalam while terdapat while atau
@@ -51,7 +52,7 @@ a = True
 b = 0
 while a:
     b += 2
-    print(b)
+    print(b, end=", ")
     if(b < 100):
         pass
     else:
@@ -69,7 +70,7 @@ while a:
 a = 0
 while True:
     b += 2
-    if(not b > 100):
+    if(not b < 100):
         break
     
 # dengan output yang sama, yaitu untuk menampilkan angka genap di bawah 100,
@@ -98,3 +99,408 @@ while True:
 # maka program akan langsung loncat kembali pada gerbang while pembuka nya sehingga
 # akan kembali melakukan pembacaan kondisi pada baris 81.
 
+a = 0
+while a < 10:
+    print("Angka ke",a, sep="-")
+    a += 1
+    
+# program di atas adalah untuk menampilkan angka dari 0 sampai 9 (sebelum 10)
+# bisa di sederhanakan menggunakan jenis loop selanjutnya, yaitu for loop
+
+for a in range(10):
+    print("Angka ke",a, sep="-")
+
+# dengan sintaks di atas, penulisan semakin mudah, karena
+# setiap iterasi atau perulangan secara otomatis akan melakukan penambahan nilai
+# sebanyak 1 (increment +1) dengan nilai a kondisi awal adalah a = 0
+# dan dilakukan berulang sampai kondisinya < 10. sehingga output yang di tampilkan sama dengan
+# program sebelumnya.
+# format penulisannya adalah sebagai berikut
+
+# for nama_variabel in range(nilai_maksimum):
+#   blok program
+# for = untuk
+# in = dalam
+# range = jenjang/jangka
+
+for i in range(5, 10):
+    print(i)
+
+# untuk penulisan seperti contoh di atas,
+# bahwa range akan di mulai dari 5
+# dan di akhiri di < 10, sehingga berakhir di 9
+# format penulisannya adalah sebagai berikut
+
+# for nama_variabel in range(minimum, maksimum):
+#   blok program
+
+# dalam sintaks looping for juga, kita dapat melakukan
+# break dan continue, yang menjadi perbedaan
+# mendasar adalah bawha looping for adalah melakukan increment
+# terhadap sebuah variabel looping wajib di setiap iterasinya.
+
+# perlu di ingat, terhadap variabel pada blok program
+
+x = 10
+y = 0
+for n in range(x):
+    print(n)
+    y += n
+    z = n % 2
+    if(z == 0):
+        print(n, z)
+        k = 10
+    
+print(y)
+
+# contoh di atas merupakan penggambaran dari blok program
+# variabel x dapat di baca di luar dan di dalam blok program for,
+# begitu juga dengan variabel y. tetapi, untuk variabel z
+# karena tidak pernah di definisikan di luar blok looping, maka
+# variabel z hanya dapat di baca di dalam for loop tersebut,
+# atau di dalam if. begitu juga dengan variabel n
+# yang hanya bisa di baca di dalam.
+# variabel k hanya dapat dibaca di dalam blok program if, tidak
+# dapat di baca di luar blok program if, walaupun masih di dalam for loop
+# apa lagi di luar looping, tidak mungkin dapat terbaca.
+
+# jika variabel di definisikan hanya di dalam blok program,
+# maka data atau isi dalam variabel tersebut tidak dapat di baca
+# pada blok yang lebih tinggi atau yang lebih luar (unbound)
+
+# x <- di luar | dapat di baca di dalam for, dapat di baca di dalam if
+# y <- di luar | dapat di baca di dalam for, dapat di baca di dalam if
+# n <- di dalam for | dapat di baca di dalam if
+# z <- di dalam for | dapat di baca di dalam if
+# k <- di dalam if | hanya di baca di dalam if
+
+for i in range(50, 100, 2):
+    print(i)
+    
+# program di atas adalah menampilkan angka genap
+# mulai dari i = 50, sampai dengan i < 100
+# hal ini dapat di lakukan , karena atribut ketiga dari fungsi range
+# adalah banyaknya penambahan yang dilakukan pada setiap iterasi
+
+for i in range (-50, -100, -2):
+    print(i)
+    
+# berikut contoh lainnya yaitu angka genap negatif
+# dimulai dari -50 sampai dengan i < -100
+# setiap perulangan dilakukan -2 sama seperti i -= 2
+
+# berikut ini ringkasan penggunaan range pada for loop
+# range(10) <- menghitung dari 0 sampai 9, dengan pertambahan 1 setiap iterasi
+# 0,1,2,3,4,5,6,7,8,9
+# range (5, 10) <- menghitung dari 5 sampai 9, dengan pertambahan 1 setiap iterasi
+# 5,6,7,8,9
+# range (5, 10, 2) <- menghirung dari 5 sampai 9, dengan pertambahan 2 setiapn iterasi
+# 5,7,9
+
+# berikut ini penulisan yang bersesuaian antara while dan for loop
+# menampilkan angka ganjil dibawah 50:
+
+a = 1
+while (a < 50):
+    print(a)
+    a += 2
+
+# dalam bentuk for loop
+
+for a in range(1, 50, 2):
+    print(a)
+    
+# menampilkan hasil perkalian lima sampai 5 * 20 :
+
+a = 0
+while(a < 20):
+    print(a * 5)
+    a += 1
+    
+# dalam for
+for a in range(20):
+    print(a * 5)
+    
+# contoh perulangan untuk membentuk segi tiga :
+tinggi = 20
+for t in range(tinggi):
+    for l in range(tinggi * 2):
+        karakter = ""
+        if l == (tinggi - 1) - t:
+            karakter = "/"
+        elif (tinggi * 2) - l == tinggi - t:
+            karakter = "\\"
+        else:
+            if(t == tinggi - 1):
+                karakter = "_"
+            else :    
+                karakter = " "
+        print(karakter, sep="", end="")
+    print()
+    
+# cara menjalankan program ini
+# python 7_looping.py
+# ekspektasi dari hasil program ini
+# 1
+# 2
+# 3
+# 4
+# 5
+# 6
+# 7
+# 8
+# 9
+# 10
+# Selesai
+# 9 0
+# 9 1
+# 9 2
+# 9 3
+# 9 4
+# 8 0
+# 8 1
+# 8 2
+# 8 3
+# 8 4
+# 7 0
+# 7 1
+# 7 2
+# 7 3
+# 7 4
+# 6 0
+# 6 1
+# 6 2
+# 6 3
+# 6 4
+# 5 0
+# 5 1
+# 5 2
+# 5 3
+# 5 4
+# 4 0
+# 4 1
+# 4 2
+# 4 3
+# 4 4
+# 3 0
+# 3 1
+# 3 2
+# 3 3
+# 3 4
+# 2 0
+# 2 1
+# 2 2
+# 2 3
+# 2 4
+# 1 0
+# 1 1
+# 1 2
+# 1 3
+# 1 4
+# 0 0
+# 0 1
+# 0 2
+# 0 3
+# 0 4
+# 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80, 82, 84, 86, 88, 90, 92, 94, 96, 98, 100, Awal
+# Angka ke-0
+# Angka ke-1
+# Angka ke-2
+# Angka ke-3
+# Angka ke-4
+# Angka ke-5
+# Angka ke-6
+# Angka ke-7
+# Angka ke-8
+# Angka ke-9
+# Angka ke-0
+# Angka ke-1
+# Angka ke-2
+# Angka ke-3
+# Angka ke-4
+# Angka ke-5
+# Angka ke-6
+# Angka ke-7
+# Angka ke-8
+# Angka ke-9
+# 5
+# 6
+# 7
+# 8
+# 9
+# 0
+# 0 0
+# 1
+# 2
+# 2 0
+# 3
+# 4
+# 4 0
+# 5
+# 6
+# 6 0
+# 7
+# 8
+# 8 0
+# 9
+# 45
+# 50
+# 52
+# 54
+# 56
+# 58
+# 60
+# 62
+# 64
+# 66
+# 68
+# 70
+# 72
+# 74
+# 76
+# 78
+# 80
+# 82
+# 84
+# 86
+# 88
+# 90
+# 92
+# 94
+# 96
+# 98
+# -50
+# -52
+# -54
+# -56
+# -58
+# -60
+# -62
+# -64
+# -66
+# -68
+# -70
+# -72
+# -74
+# -76
+# -78
+# -80
+# -82
+# -84
+# -86
+# -88
+# -90
+# -92
+# -94
+# -96
+# -98
+# 1
+# 3
+# 5
+# 7
+# 9
+# 11
+# 13
+# 15
+# 17
+# 19
+# 21
+# 23
+# 25
+# 27
+# 29
+# 31
+# 33
+# 35
+# 37
+# 39
+# 41
+# 43
+# 45
+# 47
+# 49
+# 1
+# 3
+# 5
+# 7
+# 9
+# 11
+# 13
+# 15
+# 17
+# 19
+# 21
+# 23
+# 25
+# 27
+# 29
+# 31
+# 33
+# 35
+# 37
+# 39
+# 41
+# 43
+# 45
+# 47
+# 49
+# 0
+# 5
+# 10
+# 15
+# 20
+# 25
+# 30
+# 35
+# 40
+# 45
+# 50
+# 55
+# 60
+# 65
+# 70
+# 75
+# 80
+# 85
+# 90
+# 95
+# 0
+# 5
+# 10
+# 15
+# 20
+# 25
+# 30
+# 35
+# 40
+# 45
+# 50
+# 55
+# 60
+# 65
+# 70
+# 75
+# 80
+# 85
+# 90
+# 95
+#                    /\
+#                   /  \
+#                  /    \
+#                 /      \
+#                /        \
+#               /          \
+#              /            \
+#             /              \
+#            /                \
+#           /                  \
+#          /                    \
+#         /                      \
+#        /                        \
+#       /                          \
+#      /                            \
+#     /                              \
+#    /                                \
+#   /                                  \
+#  /                                    \
+# /______________________________________\
