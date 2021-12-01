@@ -143,3 +143,35 @@ else:
     
 # di atas merupakan cara untuk mengembalikan beberapa variabel dari fungsi
 # kembalian ini di kembalikan pada rangkaian variabel disebut sebagai tuple.
+
+# menjalankan program ini
+# python 8_function.py
+# ekspektasi hasil dari program ini :
+# 5 adalah Ganjil
+# 8 adalah Genap
+# 10 adalah Genap
+# Admin
+# Admin
+# Admin
+# Admin
+# Admin
+# Admin
+# Admin
+# Admin
+# Admin
+# Admin
+# 3 lebih kecil dari 9
+# 3 lebih kecil dari 9
+# Halo, Admin
+# Halo, Admin2
+# Hai, Admin3
+# Hola, Admin4
+# Halo, Admin
+# None
+# 15
+# 15
+# Positif
+# Negatif
+# Nol
+# Bagi : 1.7142857142857142
+# Sisa : 5
