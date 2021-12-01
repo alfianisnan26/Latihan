@@ -88,7 +88,7 @@ print(nama_saya) # Admin
 
 # cara memanggil variabel adalah seperti contoh diatas
 # yaitu dengan memanggil variabel secara langsung dengan menuliskannya
-# syarat variabel dapat dipanggil adalah harus di definisikan terlebih dahuli
+# syarat variabel dapat dipanggil adalah harus di definisikan terlebih dahulu
 # pendefinisian variabel ditandai dengan adanya proses assignemnt
 # sebelum memanggil variabel ember, ember telah diisi terlebih dahulu di baris 24
 # jika tidak dilakukan assignment terlebih dahulu, maka akan terjadi error
