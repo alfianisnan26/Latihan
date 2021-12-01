@@ -1,0 +1,6 @@
+me.txt1 = txt1.text
+me.txt2 = txt1.text
+
+
+txt1 = txt1.text
+txt2 = txt2.text

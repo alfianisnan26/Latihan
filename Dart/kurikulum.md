@@ -1,0 +1,21 @@
+- Mengenal Programming
+- Mengenal Bahasa Pemograman
+- Mengenal Ranah Programming di dunia akademik
+- Mengenal Ranah Programming di dunia kerja
+- Mengenal Github
+- Mengenal Programming Workspace (Text Editor, IDE)
+- 1.dart  : Pendahuluan Dart
+- 2.dart  : Tipe Data
+- 3.dart  : IO basic
+- 4.dart  : Fungsi (Method)
+- 5.dart  : Lokalisasi Variabel dalam fungsi
+- 6.dart  : Operasi Matematika Dasar
+- 7.dart  : Conditional Operator (if-else)
+- 8.dart  : Looping
+- 9.dart  : Array
+- 10.dart : Basic Object-Oriented Programming dan Class
+- 11.dart : Inheritance
+- 12.dart : Encapsulation
+- 13.dart : Generic
+- 14.dart : Modular dan Library
+- 15.dart : Error Handling
